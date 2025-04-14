@@ -33,8 +33,7 @@ This repository contains a simple Nextflow workflow example for reproducible dat
    uv add pandas numpy scikit-learn
    
    # Add Nextflow
-   curl -s https://get.nextflow.io | bash
-   chmod +x nextflow
+   uv add nextflow
    ```
 
 4. **Create project directories**:
