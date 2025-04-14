@@ -1,0 +1,12 @@
+FROM python:3.9-slim
+
+# Install procps (for ps command needed by Nextflow)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    procps \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN pip install --no-cache-dir pandas numpy scikit-learn
+
+WORKDIR /app
+
+# The scripts will be mounted at runtime
